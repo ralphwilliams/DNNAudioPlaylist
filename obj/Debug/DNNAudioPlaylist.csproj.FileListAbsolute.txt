@@ -1,0 +1,5 @@
+C:\Users\consu\OneDrive\Open Source\DNN\DNN_8_0_4\Website\bin\DNNAudioPlaylist.dll
+C:\Users\consu\OneDrive\Open Source\DNN\DNN_8_0_4\Website\bin\DNNAudioPlaylist.pdb
+C:\Users\consu\OneDrive\Open Source\DNN\DNN_8_0_4\Website\DesktopModules\DNNAudioPlaylist\obj\Debug\DNNAudioPlaylist.csprojResolveAssemblyReference.cache
+C:\Users\consu\OneDrive\Open Source\DNN\DNN_8_0_4\Website\DesktopModules\DNNAudioPlaylist\obj\Debug\DNNAudioPlaylist.dll
+C:\Users\consu\OneDrive\Open Source\DNN\DNN_8_0_4\Website\DesktopModules\DNNAudioPlaylist\obj\Debug\DNNAudioPlaylist.pdb

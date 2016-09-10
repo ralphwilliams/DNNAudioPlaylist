@@ -1,0 +1,23 @@
+﻿<h3>DNNAudioPlaylist</h3>
+<p class="Contributor">
+	Ralph WIlliams Consulting <br />
+	<a href="mailto:consulting@ralphwilliams.com">consulting@ralphwilliams.com</a><br />
+	<a href=http://www.ralphwilliams.com/>http://www.ralphwilliams.com/</a><br />
+</p>
+<hr/>
+<div class="License">
+	<h3>About the DNNAudioPlaylist</h3>
+	<p class="Owner">
+		<b>Version CHANGEME</b><br /><br />
+	</p>
+	<p>Description about version.</p>
+	
+	<h4>Bug Fixes</h4>
+	<ul>
+			<li>List</li>
+			<li>of</li>
+			<li>bug</li>
+			<li>fixes</li>
+	</ul>
+	
+</div>
