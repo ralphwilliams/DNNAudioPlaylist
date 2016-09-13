@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -25,6 +26,9 @@
     <OldToolsVersion>12.0</OldToolsVersion>
     <UseGlobalApplicationHostFile />
     <UpgradeBackupLocation />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -118,9 +122,6 @@
     <Compile Include="Components\IItemRepository.cs" />
     <Compile Include="Components\Item.cs" />
     <Compile Include="Components\ItemRepository.cs" />
-    <Content Include="Scripts\ItemEdit.js" />
-    <Content Include="Scripts\ItemView.js" />
-    <Content Include="Scripts\QuickSettings.js" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -137,13 +138,72 @@
     <Content Include="License.txt" />
     <Content Include="module.css" />
     <Content Include="ReleaseNotes.txt" />
+    <Content Include="scripts\aurelia-core.js" />
+    <Content Include="scripts\aurelia-core.min.js" />
+    <Content Include="scripts\aurelia-routing.js" />
+    <Content Include="scripts\aurelia-routing.min.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\asyncToGenerator.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\classCallCheck.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\createClass.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\defaults.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\defineEnumerableProperties.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\defineProperty.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\extends.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\get.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\inherits.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\instanceof.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\interopRequireDefault.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\interopRequireWildcard.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\jsx.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\newArrowCheck.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\objectDestructuringEmpty.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\objectWithoutProperties.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\possibleConstructorReturn.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\selfGlobal.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\set.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\slicedToArray.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\slicedToArrayLoose.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\taggedTemplateLiteral.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\taggedTemplateLiteralLoose.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\temporalRef.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\temporalUndefined.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\toArray.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\toConsumableArray.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\babel-helpers\typeof.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\plugin-babel.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\regenerator-runtime.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\systemjs-babel-browser.js" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\systemjs-babel-node.js" />
+    <Content Include="scripts\config-esnext.js" />
+    <Content Include="scripts\config-typescript.js" />
+    <Content Include="scripts\system.js" />
     <Content Include="Settings.html" />
+    <Content Include="src\app.html" />
     <Content Include="View.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="jsconfig.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="scripts\.DS_Store" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12.json" />
+    <Content Include="scripts\babel\systemjs-plugin-babel%400.0.12\.jspm-hash" />
+    <Content Include="src\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app.ts" />
+    <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="src\todo.ts" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
@@ -175,4 +235,11 @@
   <Target Name="AfterBuild" DependsOnTargets="PackageModule">
   </Target>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v14.0\WebApplications\Microsoft.WebApplication.targets" />
+  <Import Project="packages\MSBuildTasks.1.5.0.196\build\MSBuildTasks.targets" Condition="Exists('packages\MSBuildTasks.1.5.0.196\build\MSBuildTasks.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\MSBuildTasks.1.5.0.196\build\MSBuildTasks.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\MSBuildTasks.1.5.0.196\build\MSBuildTasks.targets'))" />
+  </Target>
 </Project>

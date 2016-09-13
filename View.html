@@ -1,33 +1,31 @@
 ﻿[JavaScript:{ jsname: "JQuery" }]
 [JavaScript:{ jsname: "Knockout" }]
 [JavaScript:{ path: "~/Resources/Shared/scripts/dnn.jquery.js"}]
-[JavaScript:{ path: "~/DesktopModules/DNNAudioPlaylist/scripts/ItemView.js"}]
 
-[ModuleAction:{controlKey : "Edit", securityAccessLevel : "Edit",  titleKey: "EditModule", localResourceFile: "~/DesktopModules/DNNAudioPlaylist/App_LocalResources/View.resx" }]
 
-<div id="Items-[ModuleContext:ModuleId]">
-    <ul class="tm_tl" data-bind="foreach: itemList">
-        <li class="tm_t">
-            <h3 data-bind="text: name"></h3>
-            <div class="tm_td" data-bind="text: description"></div>
-            <div data-bind="visible: $parent.editMode()">
-                <a data-bind="attr: {href: editUrl}">[Resx:{key:"EditItem"}]</a>
-                <a data-bind="click: $parent.deleteItem" href="#">[Resx:{key:"DeleteItem"}]</a>
-            </div>
-        </li>
-    </ul>
-</div>
+
+[ModuleAction:{controlKey : "Edit", securityAccessLevel : "Edit", titleKey: "EditModule", localResourceFile: "~/DesktopModules/DNNAudioPlaylist/App_LocalResources/View.resx" }]
 
 <script language="javascript" type="text/javascript">
-    jQuery(function ($) {
+    jQuery(function($) {
         var moduleId = parseInt("[ModuleContext:ModuleId]");
-
-        var localizedSettings = {};
-
-        var viewmodel = new DNNAudioPlaylist.itemListViewModel(moduleId, localizedSettings);
-        viewmodel.init();
-
-        ko.applyBindings(viewmodel, $("#Items-" + moduleId)[0]);
-
     });
+</script>
+
+<div aurelia-app="/DesktopModules/DNNAudioPlaylist/src/main">
+
+</div>
+
+<script src="/DesktopModules/DNNAudioPlaylist/scripts/system.js"></script>
+<script src="/DesktopModules/DNNAudioPlaylist/scripts/config-typescript.js"></script>
+<script src="/DesktopModules/DNNAudioPlaylist/scripts/aurelia-core.js"></script>
+<script src="/DesktopModules/DNNAudioPlaylist/scripts/config-typescript.js"></script>
+<script src="/DesktopModules/DNNAudioPlaylist/scripts/aurelia-core.js"></script>
+<script src="/DesktopModules/DNNAudioPlaylist/scripts/aurelia-core.min.js"></script>
+<script src="/DesktopModules/DNNAudioPlaylist/scripts/aurelia-routing.js"></script>
+<script src="/DesktopModules/DNNAudioPlaylist/scripts/aurelia-routing.min.js"></script>
+<script src="/DesktopModules/DNNAudioPlaylist/scripts/config-esnext.js"></script>
+
+<script>
+    System.import('aurelia-bootstrapper');
 </script>

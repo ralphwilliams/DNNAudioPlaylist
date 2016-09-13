@@ -2,3 +2,4 @@ C:\Users\consu\OneDrive\Open Source\DNN\DNN_8_0_4\Website\bin\DNNAudioPlaylist.d
 C:\Users\consu\OneDrive\Open Source\DNN\DNN_8_0_4\Website\bin\DNNAudioPlaylist.pdb
 C:\Users\consu\OneDrive\Open Source\DNN\DNN_8_0_4\Website\DesktopModules\DNNAudioPlaylist\obj\Release\DNNAudioPlaylist.dll
 C:\Users\consu\OneDrive\Open Source\DNN\DNN_8_0_4\Website\DesktopModules\DNNAudioPlaylist\obj\Release\DNNAudioPlaylist.pdb
+C:\Users\consu\OneDrive\Open Source\DNN\DNN_8_0_4\Website\DesktopModules\DNNAudioPlaylist\obj\Release\DNNAudioPlaylist.csprojResolveAssemblyReference.cache

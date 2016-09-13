@@ -1,0 +1,14 @@
+<template>
+    <h1>${heading}</h1>
+        <input type="text" value.bind="todoDescription">
+        <button click.trigger="addTodo()">Add Todo</button>
+    <ul>
+        <li repeat.for="todo of todos">
+            <input type="checkbox" checked.bind="todo.done">
+            <span css="text-decoration: ${todo.done ? 'line-through' : 'none'}">
+                ${todo.description}
+            </span>
+            <button click.trigger="removeTodo(todo)">Remove</button>
+        </li>
+    </ul>
+</template>
